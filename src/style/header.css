@@ -1,0 +1,89 @@
+
+.header {
+    height: 14vmin;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.scroll-bg {
+    background: rebeccapurple;
+    box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.425);
+}
+
+.container-logo-nav {
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   padding: 10px;
+   
+}
+
+.logo-text {
+    text-decoration: none;
+}
+
+.logo-text h1 {
+    font-size: 6vmin;
+    text-transform: lowercase;
+    color: rebeccapurple;
+    letter-spacing: 0px;
+    padding-left: 20px;
+    margin: auto;
+
+    
+}
+.coloChangeLogo h1{
+    color:  #ffffff;
+}
+.nav{
+    width: 40%;
+    
+}
+.container-svg-icon{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.svg-icon {
+    width: 30px;
+    fill: rebeccapurple;
+}
+
+.changeColorFill{
+    fill: #ffffff;
+}
+
+.container-icon-car{
+    text-decoration: none;
+    position: relative;
+
+}
+
+.cantidad-product{
+    height: 20px;
+    width: 20px;
+    background: rebeccapurple;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.changeColorCantidadProduct{
+    background: rgb(255, 255, 255);
+    color: rebeccapurple;
+    font-weight: bold;
+}
+

@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer{
+  background: rebeccapurple;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name-academ{
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  padding: 20px;
+ 
+}
+.container-logo{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+ 
+}
+.icon-footer{
+  width: 4vmax;
+}

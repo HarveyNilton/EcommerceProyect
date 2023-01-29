@@ -1,0 +1,144 @@
+
+.home {
+    margin-top: 20vmin;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.container-input-home{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-input-home input{
+    width: 80%;
+    text-align: center;
+    height: 60px;
+    
+}
+
+.container-input-home button{
+    width: 20%;
+    background:rebeccapurple;
+    height: 60px;
+    border: none;
+    color: white;
+    
+}
+.select-home{
+    width:80%;
+    margin: 0 auto;
+
+    height: 60px;
+    text-align: center;
+   
+   
+}
+
+.container-car{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    
+}
+
+
+.cards{
+    background: rgb(255, 255, 255);
+    border: 1px solid gray;
+    width: 320px;
+    height: 450px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    
+    
+}
+.cards h2{
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: grey;
+}
+.cards span{
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(29, 29, 29);
+}
+.container-img-card{
+    height: 250px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    position: relative;
+    
+}
+
+.img-card {
+    width:100%;
+    height:80%;
+    object-fit: contain;
+    position: absolute;
+    background: #ffffff;
+    left: 0;
+    right: 0;
+  
+    z-index: 2;
+    transition: all 0.5s linear;
+}
+.img-card:hover{
+    opacity: 0;
+}
+.img-card2:hover{
+    display: block;
+}
+.img-card2 {
+    width: 100%;
+    height:80%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+
+
+.container-button-card{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.button-card{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-card:active{
+    box-shadow: 2px 2px 8px gray;
+}
+.svg-icon-button{
+    width: 30px;
+    fill: #ffffff;
+}
