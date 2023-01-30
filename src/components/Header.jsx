@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import { Link } from 'react-router-dom';
+import Menu from '../assets/menu-components/Menu';
 import '../style/header.css'
 
 const Header = () => {
@@ -9,6 +11,8 @@ const Header = () => {
     const [colorLogo, setColorLogo] = useState('')
     const [fillSvg, setFillSvg] = useState('')
     const [colorCar, setColorCar] = useState('')
+
+    const [openMenu, setOpernMenu] = useState(false)
 
     window.addEventListener('scroll' ,()=>{
         if (scrollY >= 25) {
@@ -24,9 +28,16 @@ const Header = () => {
           }
     })
 
+    const  submit =()=>{
+        setOpernMenu(!openMenu)
+      
+    }
+
     return (
         <div className= {`header ${clasheard} `}>
+            {/*openMenu && <Menu/>*/}
             <div className='container-logo-nav'>
+            <svg id="Icons" className={`svg-icon ${fillSvg}`} onClick={submit} enable-background="new 0 0 128 128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path id="Menu" d="m116 68h-104c-2.209 0-4-1.789-4-4s1.791-4 4-4h104c2.209 0 4 1.789 4 4s-1.791 4-4 4zm4 28c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4zm0-64c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4z"/></svg>
                 <Link className={`logo-text ${colorLogo}`} to='/'>
                     <h1>e-commerce</h1>
                 </Link>

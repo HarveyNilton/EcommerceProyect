@@ -7,6 +7,7 @@ import { setLoading } from '../store/slice/loading.slice';
 import { filterProductsthunk } from '../store/slice/products.slice';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CarouselImag from '../components/CarouselImag';
 
 const ProductDetail = () => {
 
@@ -45,10 +46,8 @@ const ProductDetail = () => {
                 <div className='container-img-detail'>
 
                     <figure className='container-img-general'>
-                        <img
-                            className="img-detail"
-                            src={product?.images?.[0].url} alt=""
-                        />
+                        
+                        <CarouselImag productImg={product} />
 
                     </figure>
 
@@ -96,17 +95,22 @@ const ProductDetail = () => {
                 <h3 className='text-simile'>Discover similar items</h3>
                 <div className='container-card-simile'>
 
-    
+
                     {
                         newFilterProducts.map(relaciProduc => (
-                            <div className='card-simile' key={relaciProduc.id} onClick={() => navigate(`/product/${relaciProduc.id}`)}>
-                                <div className="container-img-card-simile">
-                                    <img className='img-card-simile' src={relaciProduc?.images[0].url} />
-                                    <img className='img-car2-simile' src={relaciProduc?.images[1].url} />
-                                </div>
+                            <div className='card-simile' key={relaciProduc.id} >
 
-                                <h2>{relaciProduc.brand} <br /><span>{relaciProduc?.title}</span></h2>
-                                <p>Price <br />S/.{relaciProduc?.price}</p>
+                                <div className="sub-card-simile" onClick={() => navigate(`/product/${relaciProduc.id}`)}>
+
+                                    <div className="container-img-card-simile">
+                                        <img className='img-card-simile' src={relaciProduc?.images[0].url} />
+                                        <img className='img-car2-simile' src={relaciProduc?.images[1].url} />
+                                    </div>
+
+                                    <h2>{relaciProduc.brand} <br /><span>{relaciProduc?.title}</span></h2>
+                                    <p>Price <br />S/.{relaciProduc?.price}</p>
+
+                                </div>
 
                                 <div className='container-button-card-simile'>
                                     <div className='button-card-simile'>

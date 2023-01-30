@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Menu from '../assets/menu-components/Menu';
 import { filterforNamethunk, filterProductsthunk, getProductsthunk } from '../store/slice/products.slice';
 import '../style/home.css'
 import Car from './Car';
@@ -27,6 +28,7 @@ const Home = () => {
     return (
         <div className='home' >
             <div className='container-input-home'>
+
                 <input type="text" value={newSearch} placeholder ='What are you looking for?' 
                     onChange={(e) => setNewSearch(e.target.value)} />
                 <button onClick={() => dispatch(filterforNamethunk(newSearch))}>Search</button>
