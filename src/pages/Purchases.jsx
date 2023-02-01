@@ -23,7 +23,7 @@ const Purchases = () => {
     return fecha.split('-').reverse('').join('/')
   }
 
-  console.log(purchases);
+
   return (
     <section className='container-purchases'>
       <div className="container-purchases-home">
@@ -35,7 +35,7 @@ const Purchases = () => {
       <ul className='purchases-prdouct-list'>
         {
           purchases.map(purchase => (
-            <li key={purchase.id} className='conatainer-product-purchases' onClick={()=>navigate(`/product/${purchase.product.id}`)}>
+            <li key={purchase.id} className='conatainer-product-purchases' onClick={() => navigate(`/product/${purchase.product.id}`)}>
               <div className="image-purchases">
                 <img className='img-product-purchases' src={purchase.product.images[0].url} alt="" />
               </div>
