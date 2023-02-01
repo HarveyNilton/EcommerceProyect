@@ -1,0 +1,23 @@
+
+.conatiner-form-Login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card{
+    width: 40vmax;
+    margin: 0 auto;
+
+   
+}
+.form-card h1{
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: rebeccapurple;
+}
+.button{
+    width: 100%;
+}

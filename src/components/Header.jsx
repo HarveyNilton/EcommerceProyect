@@ -1,43 +1,61 @@
 import React, { useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Menu from '../assets/menu-components/Menu';
 import '../style/header.css'
 
 const Header = () => {
 
-    const [clasheard, setClasHeard]=useState('')
+    const [clasheard, setClasHeard] = useState('')
     const [colorLogo, setColorLogo] = useState('')
     const [fillSvg, setFillSvg] = useState('')
     const [colorCar, setColorCar] = useState('')
 
     const [openMenu, setOpernMenu] = useState(false)
 
-    window.addEventListener('scroll' ,()=>{
+    window.addEventListener('scroll', () => {
         if (scrollY >= 25) {
             setClasHeard('scroll-bg')
             setColorLogo('coloChangeLogo h1')
             setFillSvg('changeColorFill')
             setColorCar('changeColorCantidadProduct')
-          } else {
+        } else {
             setClasHeard('')
             setColorLogo('')
             setFillSvg('')
             setColorCar('')
-          }
+        }
     })
 
-    const  submit =()=>{
+    const [loginIcon, setLoginIcon] = useState(false)
+
+    const submit = () => {
         setOpernMenu(!openMenu)
-      
+       /* setLoginIcon(!loginIcon)*/
+    }
+
+   
+
+
+
+
+    const logout = () => {
+        /*const localToken = localStorage.getItem('token')*/
+       
+     
+          const local = localStorage.setItem('token', '')   
+         
+         /* setLoginIcon(!loginIcon)*/
+       
+        
     }
 
     return (
-        <div className= {`header ${clasheard} `}>
+        <div className={`header ${clasheard} `}>
             {/*openMenu && <Menu/>*/}
             <div className='container-logo-nav'>
-            <svg id="Icons" className={`svg-icon ${fillSvg}`} onClick={submit} enable-background="new 0 0 128 128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path id="Menu" d="m116 68h-104c-2.209 0-4-1.789-4-4s1.791-4 4-4h104c2.209 0 4 1.789 4 4s-1.791 4-4 4zm4 28c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4zm0-64c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4z"/></svg>
+                <svg id="Icons" className={`svg-icon ${fillSvg}`} onClick={submit} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path id="Menu" d="m116 68h-104c-2.209 0-4-1.789-4-4s1.791-4 4-4h104c2.209 0 4 1.789 4 4s-1.791 4-4 4zm4 28c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4zm0-64c0-2.211-1.791-4-4-4h-104c-2.209 0-4 1.789-4 4s1.791 4 4 4h104c2.209 0 4-1.789 4-4z" /></svg>
                 <Link className={`logo-text ${colorLogo}`} to='/'>
                     <h1>e-commerce</h1>
                 </Link>
@@ -45,8 +63,16 @@ const Header = () => {
 
             <nav className='nav'>
                 <div className='container-svg-icon'>
-                    <Link to='/Login'>
+                  <Link to='/Login'>
                         <svg className={`svg-icon ${fillSvg}`} id="Capa_1" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"><g><path id="Person_1_" d="m240 0c-132.336 0-240 107.656-240 240s107.664 240 240 240 240-107.656 240-240-107.664-240-240-240zm0 96c44.108 0 80 35.892 80 80s-35.892 80-80 80-80-35.892-80-80 35.892-80 80-80zm0 336c-55.248 0-104.976-23.592-140.04-61.068 12.852-47.684 56.352-82.932 108.04-82.932h64c51.688 0 95.188 35.248 108.04 82.932-35.064 37.476-84.792 61.068-140.04 61.068z" /></g></svg>
+                    </Link> 
+                    
+
+
+                </div>
+                <div className='container-svg-icon'>
+                <Link to='/Login' onClick={logout}>
+                        <svg className={`svg-icon ${fillSvg}`} id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m256 0c141.385 0 256 114.615 256 256s-114.615 256-256 256-256-114.615-256-256 114.615-256 256-256zm-72.5 229.748a5.655 5.655 0 0 0 -5.643 5.648v41.204a5.657 5.657 0 0 0 5.643 5.652h108.3v39.59a7.19 7.19 0 0 0 10.986 6.1l52.327-32.559 53.5-33.283a7.189 7.189 0 0 0 0-12.211l-53.5-33.287-52.327-32.556a7.19 7.19 0 0 0 -10.986 6.105v39.591zm-83.5 131.461a5.66 5.66 0 0 0 5.645 5.649h79.3a5.66 5.66 0 0 0 5.645-5.649v-41.209a5.655 5.655 0 0 0 -5.645-5.643h-32.445v-116.712h32.44a5.654 5.654 0 0 0 5.645-5.645v-41.209a5.66 5.66 0 0 0 -5.645-5.649h-79.3a5.66 5.66 0 0 0 -5.64 5.649z" /></svg>
                     </Link>
 
                 </div>

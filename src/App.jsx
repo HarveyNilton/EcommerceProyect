@@ -13,6 +13,7 @@ import gmail from '../src/img/gmail.png'
 import twitter from '../src/img/gorjeo.png'
 import instagram from '../src/img/instagram.png'
 import linkedin from '../src/img/linkedin.png'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,19 +24,22 @@ function App() {
       <HashRouter>
 
         <Header />
-       { loading && <LoadingScreen/>}
-        
+        {loading && <LoadingScreen />}
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<ProductDetail />} />
           <Route path='/Login' element={<Login />} />
-          <Route path='/purchases' element={<Purchases />} />
-          <Route path='/shopping'element={<ShoppingCar/>} />
+          <Route path='/shopping' element={<ShoppingCar />} />
+
+          <Route element={<ProtectedRoutes />}>
+            <Route path='/purchases' element={<Purchases />} />
+          </Route>
 
         </Routes>
         <footer>
           <h5 className='name-academ'>Academlo enero 2023</h5>
-          <div  className='container-logo'>
+          <div className='container-logo'>
             <img className='icon-footer' src={gmail} alt="" />
             <img className='icon-footer' src={twitter} alt="" />
             <img className='icon-footer' src={instagram} alt="" />

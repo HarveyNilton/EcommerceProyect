@@ -1,4 +1,3 @@
-
 .product-detail {
     margin-top: 20vmin;
     display: flex;
@@ -6,45 +5,49 @@
     gap: 25px;
 }
 
-.container-link{
+.container-link {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
-    padding-left: 20px;
+    width: 80%;
+    margin: 0 auto;
     list-style: none;
     font-size: 1.2rem;
 }
-.link-product-detail{
+
+.link-product-detail {
     text-decoration: none;
     font-weight: 500;
     color: gray;
     font-size: 1rem;
 }
 
-.container-link li{
-   font-weight: bold;
-	font-size: 1rem;
+.produc-detail-title {
+    font-size: 1rem;
+   
 }
 
 
 .container-product {
     display: flex;
     flex-wrap: wrap;
-  justify-content: center;
-  
+    justify-content: center;
+
 }
 
 .container-img-detail {
     width: 90vmin;
-    
+
 }
 
-.container-img-general{
+.container-img-general {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-   
+
     /*display: flex;
     justify-content: center;
     align-items: center;
@@ -53,18 +56,19 @@
     height: 70%;*/
 }
 
-.img-detail{
+.img-detail {
     width: 90%;
     height: 70%;
     object-fit: contain;
 
-   /* width: 0px;
+    /* width: 0px;
     flex-grow: 1;
     object-fit: contain;
     opacity: 0.8;
     transition: 0.5s ease;*/
-  
+
 }
+
 /*
 .img-detail:hover{
     cursor: pointer;
@@ -75,23 +79,24 @@
     /*filter: contrast(120%);
 }*/
 
-.container-img-detail-scroll{
+.container-img-detail-scroll {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-   
+
 }
 
-.img-cuadro{
+.img-cuadro {
     padding: 5px;
 }
 
-.img-cuadro:hover{
-   outline: solid 1px rebeccapurple;
-   
+.img-cuadro:hover {
+    outline: solid 1px rebeccapurple;
+
 }
-.img-detail-scroll{
+
+.img-detail-scroll {
     width: 60px;
     height: 60px;
     object-fit: contain;
@@ -106,54 +111,62 @@
     gap: 10px;
     justify-content: center;
 }
-.container-description-detail h6{
+
+.container-description-detail h6 {
     color: grey;
     font-size: 1rem;
 }
-.container-description-detail h3{
+
+.container-description-detail h3 {
     font-size: 1.2rem;
     padding-left: 20px;
     font-weight: bold;
 }
-.container-description-detail p{
+
+.container-description-detail p {
     line-height: 1.1rem;
     text-align: justify;
 }
 
-.container-precios{
+.container-precios {
     line-height: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.price-cont{
-width: 42vmin;
-}
-.quantity-cont{
+
+.price-cont {
     width: 42vmin;
 }
-.item{
+
+.quantity-cont {
+    width: 42vmin;
+}
+
+.item {
     font-size: 1rem;
     color: grey;
 }
 
-.container-button-detail{
+.container-button-detail {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid rebeccapurple;
     width: 140px;
 }
-.container-button-detail div{
- 
+
+.container-button-detail div {
+
     text-align: justify;
     margin: 0 auto;
     color: rebeccapurple;
     font-size: 1.5rem;
     font-weight: bold;
-    
+
 }
-.button-deatil{
+
+.button-deatil {
     height: 30px;
     width: 50px;
     font-size: 1.5rem;
@@ -162,38 +175,40 @@ width: 42vmin;
     background: rebeccapurple;
     border: none;
 }
-.button-deatil:active{
-    box-shadow: 2px 2px 8px gray ;
+
+.button-deatil:active {
+    box-shadow: 2px 2px 8px gray;
 }
 
-.button-add-card{
+.button-add-card {
     background: rebeccapurple;
     color: white;
     height: 50px;
     border: none;
 }
 
-.button-add-card:active{
-    box-shadow: 2px 2px 8px gray ;
+.button-add-card:active {
+    box-shadow: 2px 2px 8px gray;
 }
 
 
 
 
-.container-gene-simile{
+.container-gene-simile {
     display: flex;
     flex-direction: column;
-  
-    
+
+
 }
 
-.text-simile{
+.text-simile {
     font-size: 1.2rem;
+    display: block;
     padding: 20px;
     color: rebeccapurple;
 }
 
-.container-card-simile{
+.container-card-simile {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -204,7 +219,7 @@ width: 42vmin;
 }
 
 
-.card-simile{
+.card-simile {
     background: rgb(255, 255, 255);
     border: 1px solid gray;
     width: 320px;
@@ -216,69 +231,75 @@ width: 42vmin;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    
+
 }
-.card-simile h2{
+
+.card-simile h2 {
     font-size: 0.8rem;
     letter-spacing: 0px;
     font-weight: 400;
     color: grey;
 }
-.card-simile span{
+
+.card-simile span {
     font-size: 1rem;
     text-transform: capitalize;
     font-weight: bold;
     color: rgb(29, 29, 29);
 }
-.container-img-card-simile{
+
+.container-img-card-simile {
     height: 250px;
-  
+
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 
     position: relative;
-    
+
 }
 
 .img-card-simile {
-    width:100%;
-    height:80%;
+    width: 100%;
+    height: 80%;
     object-fit: contain;
     position: absolute;
     background: #ffffff;
     left: 0;
     right: 0;
-  
+
     z-index: 2;
     transition: all 0.5s linear;
 }
-.img-card-simile:hover{
+
+.img-card-simile:hover {
     opacity: 0;
 }
-.img-car2-simile:hover{
+
+.img-car2-simile:hover {
     display: block;
 }
+
 .img-car2-simile {
     width: 100%;
-    height:80%;
+    height: 80%;
     object-fit: contain;
     position: absolute;
     left: 0;
     right: 0;
     z-index: 1;
-    
+
 }
 
 
-.container-button-card-simile{
+.container-button-card-simile {
     display: flex;
     justify-content: flex-end;
-    
+
 }
 
-.button-card-simile{
+.button-card-simile {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -287,10 +308,12 @@ width: 42vmin;
     justify-content: center;
     align-items: center;
 }
-.button-card-simile:active{
+
+.button-card-simile:active {
     box-shadow: 2px 2px 8px gray;
 }
-.svg-icon-button-simile{
+
+.svg-icon-button-simile {
     width: 30px;
     fill: #ffffff;
 }

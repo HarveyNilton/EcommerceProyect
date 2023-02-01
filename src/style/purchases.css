@@ -1,0 +1,132 @@
+.container-purchases {
+    margin-top: 20vmin;
+
+}
+
+.link-home{
+    text-decoration: none;
+    color: gray;
+}
+.container-purchases-home {
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: start;
+    align-items: center;
+   
+}
+.circle{
+    background: red;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+ 
+   
+}
+
+
+.name-my-pucharses {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 6vmin;
+}
+
+
+.purchases-prdouct-list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    margin: 0 auto;
+
+}
+
+.conatainer-product-purchases {
+
+    width: 100%;
+    height: 90px;
+    list-style: none;
+    display: flex;
+    transition: all 1s linear;
+    border-bottom: 1px solid gray;
+    
+}
+
+
+
+.img-product-purchases {
+    width: 100%;
+
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.image-purchases {
+    width: 20%;
+
+}
+
+.name-product-purchases {
+    width: 40%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding: 8px;
+}
+
+.date {
+    color: rgba(128, 128, 128, 0.788);
+    display: none;
+    font-size: 0.8rem;
+
+}
+
+.quantity {
+   
+    width: 17.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+   
+    width: 80%;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.price {
+    width: 22.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    
+}
+
+@media(min-width: 768px) {
+    .date {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quantity {
+        width: 10%
+    }
+
+    .price {
+        width: 15%;
+    }
+}
