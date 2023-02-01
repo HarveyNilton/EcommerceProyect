@@ -1,10 +1,10 @@
 .container-product-car {
     padding: 1px;
     height: 150px;
+
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
 }
 
@@ -51,23 +51,22 @@
 
 .container-button {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .button-prev {
     width: 30%;
-    background: rebeccapurple;
-    color: white;
+    color: rebeccapurple;
     font-size: 1.2rem;
-   
+    background: none;
+    border: 1px solid gray;
 }
 
 .button-next {
     width: 30%;
-    background: rebeccapurple;
-    color: white;
+    color: rebeccapurple;
     font-size: 1.2rem;
+    background: none;
+    border: 1px solid gray;
 }
 
 .count {
@@ -75,18 +74,19 @@
     text-align: center;
     color: rebeccapurple;
     font-size: 1.3rem;
-    
+    border: 1px solid gray;
+
 }
 
 .container-icon-delete {
     width: 15%;
-    display: flex;
-    justify-content: center;
+
 }
 
 .icon-delete {
     width: 100%;
     fill: red;
+
 }
 
 .container-price {
