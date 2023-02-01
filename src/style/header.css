@@ -70,17 +70,20 @@
 
 }
 
+
 .cantidad-product {
-    height: 20px;
-    width: 20px;
+    width: 4vmin;
+    height: 4vmin;
+   /* height: 20px;
+    width: 20px;*/
     background: rebeccapurple;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: 0;
+    right: -1.5vmin;
     color: white;
     font-size: 0.8rem;
 }
