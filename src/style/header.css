@@ -70,7 +70,6 @@
 
 }
 
-
 .cantidad-product {
     width: 4vmin;
     height: 4vmin;
@@ -82,8 +81,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    right: -1.5vmin;
+    top: -.2vmax;
+    right: -10px;
     color: white;
     font-size: 0.8rem;
 }
