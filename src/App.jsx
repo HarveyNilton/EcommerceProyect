@@ -8,7 +8,6 @@ import Login from './pages/Login'
 import Header from './components/Header'
 import LoadingScreen from './components/LoadingScreen'
 import { useSelector } from 'react-redux'
-import ShoppingCar from './pages/ShoppingCar'
 import gmail from '../src/img/gmail.png'
 import twitter from '../src/img/gorjeo.png'
 import instagram from '../src/img/instagram.png'
@@ -30,8 +29,6 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<ProductDetail />} />
           <Route path='/Login' element={<Login />} />
-          <Route path='/shopping' element={<ShoppingCar />} />
-
           <Route element={<ProtectedRoutes />}>
             <Route path='/purchases' element={<Purchases />} />
           </Route>
