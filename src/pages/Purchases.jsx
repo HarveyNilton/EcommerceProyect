@@ -29,7 +29,7 @@ const Purchases = () => {
       <div className="container-purchases-home">
         <Link className='link-home' to='/'>Home</Link>
         <div className="circle"></div>
-        <p className="title">purchases</p>
+        <div className="title">purchases</div>
       </div>
       <h1 className='name-my-pucharses'>My Purchases</h1>
       <ul className='purchases-prdouct-list'>
