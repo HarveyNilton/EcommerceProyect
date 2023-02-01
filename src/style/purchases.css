@@ -1,12 +1,15 @@
 .container-purchases {
     margin-top: 20vmin;
 
+
 }
 
-.link-home{
+.link-home {
     text-decoration: none;
     color: gray;
+    font-size: 1rem;
 }
+
 .container-purchases-home {
     display: flex;
     gap: 10px;
@@ -14,15 +17,20 @@
     margin: 0 auto;
     justify-content: start;
     align-items: center;
-   
+ 
 }
-.circle{
+
+.title {
+    font-size: 1rem;
+}
+
+.circle {
     background: red;
     border-radius: 50%;
     width: 8px;
     height: 8px;
- 
-   
+
+
 }
 
 
@@ -32,6 +40,8 @@
     margin: 0 auto;
     margin-bottom: 40px;
     font-size: 6vmin;
+
+
 }
 
 
@@ -55,7 +65,7 @@
     display: flex;
     transition: all 1s linear;
     border-bottom: 1px solid gray;
-    
+
 }
 
 
@@ -91,7 +101,7 @@
 }
 
 .quantity {
-   
+
     width: 17.5%;
     display: flex;
     justify-content: center;
@@ -99,7 +109,7 @@
 }
 
 .box {
-   
+
     width: 80%;
     border: 1px solid grey;
     text-align: center;
@@ -111,7 +121,7 @@
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
-    
+
 }
 
 @media(min-width: 768px) {

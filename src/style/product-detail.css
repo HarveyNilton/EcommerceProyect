@@ -12,8 +12,14 @@
     gap: 10px;
     width: 80%;
     margin: 0 auto;
-    list-style: none;
-    font-size: 1.2rem;
+    
+    
+}
+.circle-prod{
+    background: red;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
 }
 
 .link-product-detail {
@@ -21,10 +27,12 @@
     font-weight: 500;
     color: gray;
     font-size: 1rem;
+    
 }
 
 .produc-detail-title {
     font-size: 1rem;
+   
    
 }
 

@@ -36,7 +36,7 @@ const ProductDetail = () => {
         <div className='product-detail'>
             <div className='container-link'>
                 <Link className='link-product-detail' to='/'>Home </Link>
-                <div className="circle"></div>
+                <div className="circle-prod"></div>
                 <h3 className='produc-detail-title'> {product?.title}</h3>
             </div>
 
