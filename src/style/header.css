@@ -67,6 +67,7 @@
 .container-icon-car {
     text-decoration: none;
     position: relative;
+    height: 7vmin;
 
 }
 
@@ -81,8 +82,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -.2vmax;
-    right: -0.5vmax;
+    top: -5px;
+    right: 0;
     color: white;
     font-size: 0.8rem;
 }
