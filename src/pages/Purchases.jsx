@@ -44,7 +44,7 @@ const Purchases = () => {
 
               <div className="date">{convertFromStringToDate(purchase.createdAt)}</div>
               <div className="quantity">
-                <div className="box">1</div>
+                <div className="box">{purchase.quantity}</div>
               </div>
               <div className="price">{`S/.${purchase.product.price}`}</div>
             </li>

@@ -22,6 +22,7 @@ export const getPurchasesthunk = () => (dispatch) => {
         .finally(() => dispatch(setLoading(false)));
 }
 
+
 export const { setPurchases } = purchasesslice.actions;
 
 export default purchasesslice.reducer;

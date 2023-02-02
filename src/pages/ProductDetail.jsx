@@ -8,6 +8,9 @@ import { filterProductsthunk } from '../store/slice/products.slice';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CarouselImag from '../components/CarouselImag';
+import { AddPurchasesthunk } from '../store/slice/addProductsCar.slice';
+
+
 
 const ProductDetail = () => {
 
@@ -31,6 +34,22 @@ const ProductDetail = () => {
             .finally(() => dispatch(setLoading(false)))
     }, [id])
 
+    const [quantity, setQuantity] = useState(1)
+
+    const prev =()=>{
+        setQuantity(quantity-1)
+    }
+    const next=()=>{
+        setQuantity(quantity+1)
+    }
+
+    const addtoPurchases = (id) => {
+        const purchases ={
+            "productId": product.id,
+            "quantity": quantity
+        }
+       dispatch(AddPurchasesthunk(purchases))
+    }
 
     return (
         <div className='product-detail'>
@@ -40,14 +59,12 @@ const ProductDetail = () => {
                 <div className='produc-detail-title'> {product?.title}</div>
             </div>
 
-
-
             <section className='container-product'>
 
                 <div className='container-img-detail'>
 
                     <figure className='container-img-general'>
-                        
+
                         <CarouselImag productImg={product} />
 
                     </figure>
@@ -79,14 +96,14 @@ const ProductDetail = () => {
                         <div className='quantity-cont'>
                             <h2 className='item'>Quantity</h2>
                             <div className='container-button-detail'>
-                                <button className='button-deatil'>-</button>
-                                <div>1</div>
-                                <button className='button-deatil'>+</button>
+                                <button onClick={prev} disabled={quantity===1} className='button-deatil'>-</button>
+                                <div className='quantity-co'>{quantity}</div>
+                                <button  onClick={next} className='button-deatil'>+</button>
                             </div>
                         </div>
 
                     </div>
-                    <button className='button-add-card'>Add to card</button>
+                    <button onClick={addtoPurchases} className='button-add-card'>Add to card</button>
                 </div>
 
 
