@@ -35,6 +35,19 @@ export const  purchaseCartthunk = () => (dispatch) => {
         .then(() => dispatch(addProducCarthunk()))
         .finally(() => dispatch(setLoading(false)));
 }
+
+export const updatePurchasesthunk = (id, quantity) => (dispatch) => {
+    dispatch(setLoading(true));
+    const body = {
+        "quantity": quantity,
+    }
+    axios.put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}/`, body, getConfig())
+        .then(() => dispatch(addProducCarthunk()))
+        .finally(() => dispatch(setLoading(false)));
+}
+
+
+
 export const {setAddProductCar } = addProductsCarslice.actions;
 
 export default addProductsCarslice.reducer;

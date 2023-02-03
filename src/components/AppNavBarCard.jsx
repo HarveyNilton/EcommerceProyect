@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { addProducCarthunk, purchaseCartthunk } from '../store/slice/addProductsCar.slice';
+import { addProducCarthunk, purchaseCartthunk, updatePurchasesthunk } from '../store/slice/addProductsCar.slice';
 import '../style/app-nav-bar-car.css'
 
 const AppNavBarCard = ({ shows, handleClose }) => {
@@ -13,14 +13,29 @@ const AppNavBarCard = ({ shows, handleClose }) => {
         dispatch(addProducCarthunk())
     }, [])
 
-    const [quantityProduct, setQuantityProduct] = useState(1)
+   
+console.log(addProductCar);
+  
 
-    const subTotalPrice =(price)=>{
-        const subTotalPrecie = price
-        return subTotalPrecie * quantityProduct
+    const increment = (productCar) => {
+        
+        dispatch(updatePurchasesthunk( productCar.id, productCar.quantity+1))
+        
     }
 
-     
+    const decrement = (productCar) => {
+    
+        dispatch(updatePurchasesthunk( productCar.id, productCar.quantity-1))
+       
+    }
+
+    const subTotalPrice = (productCar) => {
+        const subTotalPrecie = productCar?.product.price
+        return subTotalPrecie * productCar?.quantity
+    }
+
+  
+ 
 
     return (
         <div>
@@ -41,10 +56,9 @@ const AppNavBarCard = ({ shows, handleClose }) => {
                                             <div><p>{productCar.product.title}</p></div>
                                             <div className='container-button'>
 
-
-                                                <button onClick={()=> setQuantityProduct(quantityProduct-1)} disabled={quantityProduct===1} className='button-prev'>-</button>
-                                                <div className='count'>{productCar.quantity +quantityProduct}</div>
-                                                <button onClick={()=>setQuantityProduct(quantityProduct+1)} className='button-next'>+</button>
+                                                <button onClick={() => decrement(productCar)} disabled={productCar.quantity===1} className='button-prev'>-</button>
+                                                <div className='count'>{productCar.quantity}</div>
+                                                <button onClick={() => increment(productCar)} className='button-next'>+</button>
                                             </div>
                                         </div>
                                         <div className='container-icon-delete'>
@@ -54,7 +68,7 @@ const AppNavBarCard = ({ shows, handleClose }) => {
                                     </div>
                                     <div className='container-price'>
                                         <div className='total-name'>Total</div>
-                                        <div className='precio-total'>S/.{subTotalPrice(productCar.product.price)}</div>
+                                        <div className='precio-total'>S/.{ subTotalPrice(productCar).toFixed(2)}</div>
                                     </div>
                                 </div>
                             </li>
@@ -69,11 +83,11 @@ const AppNavBarCard = ({ shows, handleClose }) => {
                         <div className='total-name'>Total</div>
                         <div className='precio-total'>S/.{}</div>
                     </div>
-                    <button onClick={()=> dispatch(purchaseCartthunk())}>ChecKCout</button>
+                    <button onClick={() => dispatch(purchaseCartthunk())}>ChecKCout</button>
                 </div>
 
             </Offcanvas>
-         
+
         </div>
     );
 };
