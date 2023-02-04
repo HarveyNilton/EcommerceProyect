@@ -12,10 +12,11 @@
     gap: 10px;
     width: 80%;
     margin: 0 auto;
-    
-    
+
+
 }
-.circle-prod{
+
+.circle-prod {
     background: red;
     border-radius: 50%;
     width: 8px;
@@ -27,8 +28,8 @@
     font-weight: 500;
     color: gray;
     font-size: 1rem;
-    
-    
+
+
 }
 
 
@@ -53,17 +54,8 @@
 
 .container-img-general {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    height: 100%;
 
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    height: 70%;*/
 }
 
 .img-detail {
@@ -163,10 +155,10 @@
     justify-content: center;
     align-items: center;
     width: 140px;
-   
+
 }
 
-.quantity-co{
+.quantity-co {
     width: 30%;
     height: 30px;
     display: flex;
@@ -177,11 +169,11 @@
 }
 
 .button-deatil {
-   width: 30%;
-   height: 30px;
+    width: 30%;
+    height: 30px;
     font-size: 1.5rem;
     font-weight: bold;
-    color:  rebeccapurple;
+    color: rebeccapurple;
     border: 1px solid grey;
     background: none;
 }

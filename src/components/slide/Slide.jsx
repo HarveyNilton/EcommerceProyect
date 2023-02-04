@@ -1,39 +1,49 @@
 import React from 'react';
 import './slide.css'
 
-const Slide = ({productImg}) => {
+const Slide = ({ productImg }) => {
 
-    console.log(productImg + 'lalalal')
+    console.log(productImg.images?.[0].url + 'lalalal')
 
     return (
         <div className='container-general'>
 
-            <input type="radio" id='1' name='image-slide' hidden />
-            <input type="radio" id='2' name='image-slide' hidden />
-            <input type="radio" id='3' name='image-slide' hidden />
+            {
+                productImg.images?.map((imgProd, index) => (
+                    <input type="radio" id={index} name='image-slide' hidden />
+
+                ))
+            }
+          
+         
 
             <section className='slide'>
-            
-                
 
-                
+                {
+                    productImg.images?.map((imgProd, index) => (
+                        <figure className='item-slide'>
+                            <img className='img-slide' src={imgProd.url} alt="" />
+
+                        </figure>
+
+                    ))
+                }
+
             </section>
 
-          { /* <section className='pagination'>
+            <section className='pagination'>
+                {
+                    productImg.images?.map((imgProd, index) => (
+                        <label className='pagination-item' htmlFor={index}>
 
-                <label className='pagination-item' htmlFor="1">
-                    <img className='img-pag' src={imgBandera} alt="" />
-                </label>
+                            <img className='img-pag' src={imgProd.url} alt="" />
+                        </label>
 
-                <label className='pagination-item' htmlFor="2">
-                    <img className='img-pag'  src={imgPaisajeUno} alt="" />
-                </label>
 
-                <label className='pagination-item' htmlFor="3">
-                    <img  className='img-pag' src={imgPaisajeDos} alt="" />
-                </label>
+                    ))
+                }
 
-            </section>*/}
+            </section>
 
         </div>
     );

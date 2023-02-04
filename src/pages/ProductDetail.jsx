@@ -4,10 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../store/slice/loading.slice';
-import { filterProductsthunk } from '../store/slice/products.slice';
-import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CarouselImag from '../components/CarouselImag';
 import { AddPurchasesthunk } from '../store/slice/addProductsCar.slice';
 import Slide from '../components/slide/Slide';
 
@@ -69,23 +66,8 @@ const ProductDetail = () => {
                     
                         <Slide productImg={product} />
 
-                      { /* <CarouselImag productImg={product} />*/}
-
                     </figure>
 
-                    {/*<figure className='container-img-detail-scroll'>
-                        <div className='img-cuadro'>
-                            <img className='img-detail-scroll' src={product?.images?.[0].url} alt="" />
-                        </div>         <div className='img-cuadro'>
-                            <img className='img-detail-scroll' src={product?.images?.[1].url} alt="" />
-
-                        </div>
-
-                        <div className='img-cuadro'>
-                            <img className='img-detail-scroll' src={product?.images?.[2].url} alt="" />
-                        </div>
-
-                    </figure>*/}
                 </div>
 
                 <div className='container-description-detail'>
