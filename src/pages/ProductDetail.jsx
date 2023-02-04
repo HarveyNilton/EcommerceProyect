@@ -9,6 +9,7 @@ import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CarouselImag from '../components/CarouselImag';
 import { AddPurchasesthunk } from '../store/slice/addProductsCar.slice';
+import Slide from '../components/slide/Slide';
 
 
 
@@ -51,6 +52,8 @@ const ProductDetail = () => {
        dispatch(AddPurchasesthunk(purchases))
     }
 
+    console.log(product.images?.[0].url)
+
     return (
         <div className='product-detail'>
             <div className='container-link'>
@@ -64,12 +67,14 @@ const ProductDetail = () => {
                 <div className='container-img-detail'>
 
                     <figure className='container-img-general'>
+                    
+                        <Slide productImg={product} />
 
-                        <CarouselImag productImg={product} />
+                      { /* <CarouselImag productImg={product} />*/}
 
                     </figure>
 
-                    <figure className='container-img-detail-scroll'>
+                    {/*<figure className='container-img-detail-scroll'>
                         <div className='img-cuadro'>
                             <img className='img-detail-scroll' src={product?.images?.[0].url} alt="" />
                         </div>         <div className='img-cuadro'>
@@ -81,7 +86,7 @@ const ProductDetail = () => {
                             <img className='img-detail-scroll' src={product?.images?.[2].url} alt="" />
                         </div>
 
-                    </figure>
+                    </figure>*/}
                 </div>
 
                 <div className='container-description-detail'>
