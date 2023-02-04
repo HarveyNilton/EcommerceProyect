@@ -28,6 +28,7 @@ const Menu = () => {
             })
         });
     */
+   
 
     return (
         <div>
@@ -41,9 +42,11 @@ const Menu = () => {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>Accordion Item #2</Accordion.Header>
                     <Accordion.Body>
+                        
                         {category?.map(cate => (
-                            <li key={cate.id} className="list-inside">
-                                <a href="#" className='nav-link nav-link-inside'>{cate.name}</a>
+                            <li key={cate.id} className="list-inside" value={cate.id} onClick={e =>console.log(e.target.value)}>
+                                <h5  className='nav-link nav-link-inside' >{cate.name}</h5>
+                            
                             </li>
                         ))}
                     </Accordion.Body>
