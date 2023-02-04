@@ -2,8 +2,9 @@ import React from 'react';
 import './slide.css'
 
 const Slide = ({productImg}) => {
-    
-    console.log(productImg.images?.[0].url + 'hahahahah')
+
+    console.log(productImg + 'lalalal')
+
     return (
         <div className='container-general'>
 

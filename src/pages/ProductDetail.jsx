@@ -52,7 +52,6 @@ const ProductDetail = () => {
        dispatch(AddPurchasesthunk(purchases))
     }
 
-    console.log(product.images?.[0].url)
 
     return (
         <div className='product-detail'>
