@@ -21,3 +21,14 @@
 .button{
     width: 100%;
 }
+
+.container-user{
+
+    text-align: center;
+
+}
+
+.container-user h6{
+    font-weight: 400;
+    line-height: 25px;
+}

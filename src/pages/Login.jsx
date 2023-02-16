@@ -37,6 +37,10 @@ const Login = () => {
 
             <Form className='form-card' onSubmit={handleSubmit(submit)}>
                 <h1>Login</h1>
+
+                <div className="container-user">
+                    <h6>Email <br /> harvey@hotmail.com <br />Password <br />987654321</h6>
+                </div>
                 <Form.Group className='mb-3' controlId='email'>
                     <Form.Label>Email</Form.Label>
                     <Form.Control type="email" {...register('email')} />
