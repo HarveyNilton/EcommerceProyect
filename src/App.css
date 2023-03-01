@@ -11,6 +11,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .name-academ{
@@ -30,3 +31,6 @@ footer{
 .icon-footer{
   width: 4vmax;
 }
+
+
+  

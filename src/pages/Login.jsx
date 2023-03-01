@@ -39,7 +39,7 @@ const Login = () => {
                 <h1>Login</h1>
 
                 <div className="container-user">
-                    <h6>Email <br /> harvey@hotmail.com <br />Password <br />987654321</h6>
+                    <h6>Email <br /> john@gmail.com <br />Password <br />john1234</h6>
                 </div>
                 <Form.Group className='mb-3' controlId='email'>
                     <Form.Label>Email</Form.Label>
